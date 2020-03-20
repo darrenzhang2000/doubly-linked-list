@@ -8,6 +8,7 @@ class DoublyLinkedList
 {
 private:
     DoubleNode<ItemType>* headPtr;
+    DoubleNode<ItemType>* tailPtr;
     int itemCount;
 public:
     DoublyLinkedList();
