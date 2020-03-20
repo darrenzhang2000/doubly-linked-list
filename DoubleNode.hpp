@@ -15,11 +15,13 @@ private:
 public:
     DoubleNode();
     DoubleNode(const ItemType& anItem);
-    DoubleNode(const ItemType& anItem, Node<ItemType>* nextNodePtr);
+    DoubleNode(const ItemType& anItem, DoubleNode<ItemType>* nextNodePtr, DoubleNode<ItemType>* prevNodePtr);
     void setItem(const ItemType& anItem);
-    void setNext(Node<ItemType>* nextNodePtr);
+    void setNext(DoubleNode<ItemType>* nextNodePtr);
+    void setPrev(DoubleNode<ItemType>* prevNodePtr);
     ItemType getItem() const;
-    Node<ItemType>* getNext() const;
+    DoubleNode<ItemType>* getNext() const;
+    DoubleNode<ItemType>* getPrev() const;
 };
 
 #include "DoubleNode.cpp"
